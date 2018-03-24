@@ -1,0 +1,163 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	background-image: url('bane.jpg');
+}
+
+.header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	padding: 8px;
+	background-color: #444444;
+	color: #FFFFFF;
+	z-index: 9001;
+}
+
+.header p {
+	margin: 0;
+}
+
+.container {
+	display: flex;
+	margin: 120px 10px 10px 10px;
+}
+
+.solution_container {
+	display: inline-block;
+	width: 400px;
+	height: 800px;
+	background-color: #EEEEEE;
+	margin: 4px;
+}
+
+.solution {
+	background-color: #DDDDDD;
+	width: 380px;
+	height: 700px;
+	margin: 10px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.solution p {
+	margin: 0;
+}
+
+.puzzle_container {
+	display: inline-block;
+	width: 400px;
+	height: 800px;
+	background-color: #EEEEEE;
+	margin: 4px;
+}
+
+
+
+.puzzle {
+	display: block;
+	width: 300px;
+	height: 300px;
+}
+
+.color {
+	position: relative;
+	width: 64px;
+	height: 64px;
+	display: inline-block;
+	margin: 0;
+	border: solid 1px black;
+	background-image: url('thinking.jpg');
+}
+
+.in_color {
+	position: absolute;
+	width: 50px;
+	height: 10px;
+}
+
+.red {
+	background-image: url('');
+	background-color: red;
+}
+
+.white {
+	background-image: url('');
+	background-color: white;
+}
+
+.cyan {
+	background-image: url('');
+	background-color: cyan;
+}
+
+.pink {
+	background-image: url('');
+	background-color: #FF44AA;
+}
+
+.blue {
+	background-image: url('');
+	background-color: #0000FF;
+}
+
+.green {
+	background-image: url('');
+	background-color: #00DD00;
+}
+
+.lime {
+	background-image: url('');
+	background-color: #88FF00;
+}
+
+.black {
+	background-image: url('');
+	background-color: #000000;
+}
+
+.gray {
+	background-image: url('');
+	background-color: #4444;
+}
+
+.purple {
+	background-image: url('');
+	background-color: #770077;
+}
+
+.orange {
+	background-image: url('');
+	background-color: #FF8800;
+}
+
+.yellow {
+	background-image: url('');
+	background-color: #FFFF00;
+}
+
+.lightblue {
+	background-image: url('');
+	background-color: #6666FF;
+}
+
+.magenta {
+	background-image: url('');
+	background-color: #FF00DD;
+}
+
+.brown {
+	background-image: url('');
+	background-color: #662200;
+}
+
+.blank {
+	background-image: url('');
+	background-image: url('bane_small.jpg');
+
+}
+
+.unknown {
+	background-image: url('thinking.jpg');
+}

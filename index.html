@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Anti Bitcoin</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<script src="engine.js"></script>
+<script src="minheap.js"></script>
+<body onload="initialize()">
+	<div class="header">
+		<p>CRASHING NICECRAFT BITCOIN MARKET (WITH NO SURVIVORS) FUCK U SLARER</p>
+		<p>COLORS: blank, white, cyan, red, pink, blue, green, lime, black,
+			purple, gray, orange, yellow, lightblue, magenta, brown, blank</p>
+	</div>
+
+	<div class="container">
+		<div class="puzzle_container">
+			<p>INPUT</p>
+			<div class="puzzle" id="puzzle_input">
+				<div class="color red" id="0_in">
+					<input type="text" class="in_color" id="0_in_color" value="red" oninput="update_square('0_in', '0_in_color')">
+				</div>
+				<div class="color white" id="1_in">
+					<input type="text" class="in_color" id="1_in_color" value="white" oninput="update_square('1_in', '1_in_color')">
+				</div>
+				<div class="color cyan" id="2_in">
+					<input type="text" class="in_color" id="2_in_color" value="cyan" oninput="update_square('2_in', '2_in_color')">
+				</div>
+				<div class="color pink" id="3_in">
+					<input type="text" class="in_color" id="3_in_color" value="pink" oninput="update_square('3_in', '3_in_color')">
+				</div>
+
+				<div class="color blue" id="4_in">
+					<input type="text" class="in_color" id="4_in_color" value="blue" oninput="update_square('4_in', '4_in_color')">
+				</div>
+				<div class="color green" id="5_in">
+					<input type="text" class="in_color" id="5_in_color" value="green" oninput="update_square('5_in', '5_in_color')">
+				</div>
+				<div class="color lime" id="6_in">
+					<input type="text" class="in_color" id="6_in_color" value="lime" oninput="update_square('6_in', '6_in_color')">
+				</div>
+				<div class="color black" id="7_in">
+					<input type="text" class="in_color" id="7_in_color" value="black" oninput="update_square('7_in', '7_in_color')">
+				</div>
+
+				<div class="color gray" id="8_in">
+					<input type="text" class="in_color" id="8_in_color" value="gray" oninput="update_square('8_in', '8_in_color')">
+				</div>
+				<div class="color purple" id="9_in">
+					<input type="text" class="in_color" id="9_in_color" value="purple" oninput="update_square('9_in', '9_in_color')">
+				</div>
+				<div class="color orange" id="10_in">
+					<input type="text" class="in_color" id="10_in_color" value="orange" oninput="update_square('10_in', '10_in_color')">
+				</div>
+				<div class="color yellow" id="11_in">
+					<input type="text" class="in_color" id="11_in_color" value="yellow" oninput="update_square('11_in', '11_in_color')">
+				</div>
+
+				<div class="color lightblue" id="12_in">
+					<input type="text" class="in_color" id="12_in_color" value="lightblue" oninput="update_square('12_in', '12_in_color')">
+				</div>
+				<div class="color magenta" id="13_in">
+					<input type="text" class="in_color" id="13_in_color" value="magenta" oninput="update_square('13_in', '13_in_color')">
+				</div>
+				<div class="color brown" id="14_in">
+					<input type="text" class="in_color" id="14_in_color" value="brown" oninput="update_square('14_in', '14_in_color')">
+				</div>
+				<div class="color blank" id="15_in">
+					<input type="text" class="in_color" id="15_in_color" value="blank" oninput="update_square('15_in', '15_in_color')">
+				</div>
+			</div>
+
+			<p>SOLUTION</p>
+			<div class="puzzle" id="puzzle_input">
+				<div class="color red" id="0_sol">
+					<input type="text" class="in_color" id="0_sol_color" value="red" oninput="update_square('0_sol', '0_sol_color')">
+				</div>
+				<div class="color white" id="1_sol">
+					<input type="text" class="in_color" id="1_sol_color" value="white" oninput="update_square('1_sol', '1_sol_color')">
+				</div>
+				<div class="color cyan" id="2_sol">
+					<input type="text" class="in_color" id="2_sol_color" value="cyan" oninput="update_square('2_sol', '2_sol_color')">
+				</div>
+				<div class="color pink" id="3_sol">
+					<input type="text" class="in_color" id="3_sol_color" value="pink" oninput="update_square('3_sol', '3_sol_color')">
+				</div>
+
+				<div class="color blue" id="4_sol">
+					<input type="text" class="in_color" id="4_sol_color" value="blue" oninput="update_square('4_sol', '4_sol_color')">
+				</div>
+				<div class="color green" id="5_sol">
+					<input type="text" class="in_color" id="5_sol_color" value="green" oninput="update_square('5_sol', '5_sol_color')">
+				</div>
+				<div class="color lime" id="6_sol">
+					<input type="text" class="in_color" id="6_sol_color" value="lime" oninput="update_square('6_sol', '6_sol_color')">
+				</div>
+				<div class="color black" id="7_sol">
+					<input type="text" class="in_color" id="7_sol_color" value="black" oninput="update_square('7_sol', '7_sol_color')">
+				</div>
+
+				<div class="color gray" id="8_sol">
+					<input type="text" class="in_color" id="8_sol_color" value="gray" oninput="update_square('8_sol', '8_sol_color')">
+				</div>
+				<div class="color purple" id="9_sol">
+					<input type="text" class="in_color" id="9_sol_color" value="purple" oninput="update_square('9_sol', '9_sol_color')">
+				</div>
+				<div class="color orange" id="10_sol">
+					<input type="text" class="in_color" id="10_sol_color" value="orange" oninput="update_square('10_sol', '10_sol_color')">
+				</div>
+				<div class="color yellow" id="11_sol">
+					<input type="text" class="in_color" id="11_sol_color" value="yellow" oninput="update_square('11_sol', '11_sol_color')">
+				</div>
+
+				<div class="color lightblue" id="12_sol">
+					<input type="text" class="in_color" id="12_sol_color" value="lightblue" oninput="update_square('12_sol', '12_sol_color')">
+				</div>
+				<div class="color magenta" id="13_sol">
+					<input type="text" class="in_color" id="13_sol_color" value="magenta" oninput="update_square('13_sol', '13_sol_color')">
+				</div>
+				<div class="color brown" id="14_sol">
+					<input type="text" class="in_color" id="14_sol_color" value="brown" oninput="update_square('14_sol', '14_sol_color')">
+				</div>
+				<div class="color blank" id="15_sol">
+					<input type="text" class="in_color" id="15_sol_color" value="blank" oninput="update_square('15_sol', '15_sol_color')">
+				</div>
+			</div>
+
+		</div>
+
+
+
+		<div class="solution_container">
+			<button onclick="solve()">solve</button>
+			<p id="solution_console">click to solve miney man puzzl</p>
+			<div class="solution" id="solution_list">
+
+			</div>
+
+		</div>
+	</div>
+
+
+</body>
